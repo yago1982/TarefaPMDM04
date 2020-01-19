@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ymourino.pmdm03">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".PedidosRechazadosActivity"
+            android:label="Pedidos rechazados" />
+        <activity
+            android:name=".ComprasRealizadasAdminActivity"
+            android:label="Pedidos aceptados" />
+        <activity
+            android:name=".PedidosTramiteAdminActivity"
+            android:label="Pedidos en trámite" />
+        <activity
+            android:name=".ConfirmarPedidoActivity"
+            android:label="Confirmar pedido" />
+        <activity
+            android:name=".RegistrarUsuarioActivity"
+            android:label="Registrar nuevo usuario" />
+        <activity
+            android:name=".EnviarPedidoActivity"
+            android:label="Información para el envío" />
+        <activity
+            android:name=".HacerPedidoActivity"
+            android:label="Nuevo pedido" />
+        <activity
+            android:name=".PedidosTramiteActivity"
+            android:label="Pedidos en trámite" />
+        <activity
+            android:name=".ComprasRealizadasActivity"
+            android:label="Compras realizadas" />
+        <activity
+            android:name=".MainActivityCliente" />
+        <activity
+            android:name=".MainActivityAdmin" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Tienda Virtual 2</string>
+    <string name="edit_username">Nombre de usuario</string>
+    <string name="edit_password">Contraseña</string>
+    <string name="radio_cliente">Acceso cliente</string>
+    <string name="radio_admin">Acceso administrador</string>
+    <string name="button_login">Acceder</string>
+    <string name="button_hacerPedido">Hacer pedido</string>
+    <string name="button_pedidosEnTramite">Ver pedidos en trámite</string>
+    <string name="button_comprasRealizadas">Ver compras realizadas</string>
+    <string name="button_salir">Salir</string>
+    <string name="label_categorias">Categoría:</string>
+    <string name="label_productos">Productos:</string>
+    <string name="label_cantidad">Cantidad:</string>
+    <string name="button_siguiente">Siguiente</string>
+    <string name="edit_direccion">Dirección de envío</string>
+    <string name="edit_ciudad">Ciudad</string>
+    <string name="edit_cp">Código Postal</string>
+    <string name="button_finalizar">Revisar y finalizar</string>
+    <string name="button_registro">Registrarse</string>
+    <string name="check_administrador">¿Es administrador?</string>
+    <string name="button_registrarUsuario">Registrar nuevo usuario</string>
+    <string name="edit_nombre">Nombre</string>
+    <string name="edit_apellidos">Apellidos</string>
+    <string name="button_confirmar">Confirmar y guardar</string>
+    <string name="button_cancelar">Cancelar pedido</string>
+    <string name="label_direccion">Dirección de envío:</string>
+    <string name="label_ciudad">Ciudad:</string>
+    <string name="label_cp">Código postal:</string>
+    <string name="img_avatar">Avatar</string>
+    <string name="item_pedidosAceptados">Ver pedidos aceptados</string>
+    <string name="item_pedidosRechazados">Ver pedidos rechazados</string>
+    <string name="button_aceptarPedido">Aceptar pedido</string>
+    <string name="button_rechazarPedido">Rechazar pedido</string>
+</resources>

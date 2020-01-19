@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_nuevoPedido"
+        android:title="@string/button_hacerPedido" />
+    <item
+        android:id="@+id/item_pedidosTramite"
+        android:title="@string/button_pedidosEnTramite" />
+    <item
+        android:id="@+id/item_comprasRealizadas"
+        android:title="@string/button_comprasRealizadas" />
+    <item
+        android:id="@+id/item_salir"
+        android:title="@string/button_salir" />
+
+</menu>
