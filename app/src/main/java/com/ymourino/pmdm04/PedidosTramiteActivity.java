@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,14 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.ymourino.pmdm03.adaptadores.PedidosRecViewAdapter;
-import com.ymourino.pmdm03.db.SqliteDBHelper;
-import com.ymourino.pmdm03.modelos.Pedido;
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.adaptadores.PedidosRecViewAdapter;
+import com.ymourino.pmdm04.db.SqliteDBHelper;
+import com.ymourino.pmdm04.modelos.Pedido;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 import java.util.ArrayList;
 
-public class PedidosTramiteAdminActivity extends AppCompatActivity {
+public class PedidosTramiteActivity extends AppCompatActivity {
 
     private Usuario usuario;
     private ArrayList<Pedido> pedidos;
@@ -27,7 +27,7 @@ public class PedidosTramiteAdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pedidos_tramite_admin);
+        setContentView(R.layout.activity_pedidos_tramite);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,16 +48,17 @@ public class PedidosTramiteAdminActivity extends AppCompatActivity {
         loadPedidos();
     }
 
-    private void loadPedidos() {
-        pedidos = sqliteDBHelper.getPedidosTramiteAll();
 
-        adapter = new PedidosRecViewAdapter(getApplicationContext(), pedidos, true);
+    private void loadPedidos() {
+        pedidos = sqliteDBHelper.getPedidosTramite(usuario);
+
+        adapter = new PedidosRecViewAdapter(getApplicationContext(), pedidos, false);
         recyclerView.setAdapter(adapter);
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        Intent intent = new Intent(this, MainActivityAdmin.class);
+        Intent intent = new Intent(this, MainActivityCliente.class);
         intent.putExtra(LoginActivity.USUARIO, usuario);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

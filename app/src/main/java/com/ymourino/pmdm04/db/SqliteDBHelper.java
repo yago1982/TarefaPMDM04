@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03.db;
+package com.ymourino.pmdm04.db;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.ymourino.pmdm03.modelos.Pedido;
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.modelos.Pedido;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 import java.util.ArrayList;
 
@@ -97,6 +97,32 @@ public class SqliteDBHelper extends SQLiteOpenHelper {
         db.close();
 
         return id;
+    }
+
+    /**
+     * Modifica un usuario existente en la base de datos.
+     *
+     * @param usuario El usuario a modificar.
+     * @return True si se ha hecho la modificación.
+     */
+    public boolean updateUser(Usuario usuario) {
+        if (getUserByID(usuario.getId()) != null) {
+            SQLiteDatabase db = this.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+
+            values.put(Usuario.COLUMN_PASSWORD, usuario.getPassword());
+            values.put(Usuario.COLUMN_NOMBRE, usuario.getNombre());
+            values.put(Usuario.COLUMN_APELLIDOS, usuario.getApellidos());
+            values.put(Usuario.COLUMN_ADMIN, usuario.isAdmin());
+
+            db.update(Usuario.TABLE_NAME, values, Usuario.COLUMN_ID + "=" + usuario.getId(), null);
+            db.close();
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**

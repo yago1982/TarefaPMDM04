@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.ymourino.pmdm03.adaptadores.PedidosRecViewAdapter;
-import com.ymourino.pmdm03.db.SqliteDBHelper;
-import com.ymourino.pmdm03.modelos.Pedido;
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.adaptadores.PedidosRecViewAdapter;
+import com.ymourino.pmdm04.db.SqliteDBHelper;
+import com.ymourino.pmdm04.modelos.Pedido;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 import java.util.ArrayList;
 

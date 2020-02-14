@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ymourino.pmdm03.db.SqliteDBHelper;
-import com.ymourino.pmdm03.modelos.Pedido;
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.db.SqliteDBHelper;
+import com.ymourino.pmdm04.modelos.Pedido;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 public class ConfirmarPedidoActivity extends AppCompatActivity {
 

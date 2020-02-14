@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.ymourino.pmdm02", appContext.getPackageName());
+        assertEquals("com.ymourino.pmdm04", appContext.getPackageName());
     }
 }

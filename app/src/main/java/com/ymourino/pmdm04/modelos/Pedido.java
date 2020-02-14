@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03.modelos;
+package com.ymourino.pmdm04.modelos;
 
 import java.io.Serializable;
 

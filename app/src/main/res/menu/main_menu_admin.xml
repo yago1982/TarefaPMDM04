@@ -11,6 +11,9 @@
         android:id="@+id/item_pedidosRechazados"
         android:title="@string/item_pedidosRechazados" />
     <item
+        android:id="@+id/item_modificarDatos"
+        android:title="@string/item_modificarDatos" />
+    <item
         android:id="@+id/item_salir"
         android:title="@string/button_salir" />
 

@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,14 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.ymourino.pmdm03.adaptadores.PedidosRecViewAdapter;
-import com.ymourino.pmdm03.db.SqliteDBHelper;
-import com.ymourino.pmdm03.modelos.Pedido;
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.adaptadores.PedidosRecViewAdapter;
+import com.ymourino.pmdm04.db.SqliteDBHelper;
+import com.ymourino.pmdm04.modelos.Pedido;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 import java.util.ArrayList;
 
-public class ComprasRealizadasActivity extends AppCompatActivity {
+public class PedidosRechazadosActivity extends AppCompatActivity {
 
     private Usuario usuario;
     private ArrayList<Pedido> pedidos;
@@ -27,7 +27,7 @@ public class ComprasRealizadasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compras_realizadas);
+        setContentView(R.layout.activity_compras_realizadas_admin);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,7 +49,7 @@ public class ComprasRealizadasActivity extends AppCompatActivity {
     }
 
     private void loadPedidos() {
-        pedidos = sqliteDBHelper.getPedidosAceptados(usuario);
+        pedidos = sqliteDBHelper.getPedidosRechazados();
 
         adapter = new PedidosRecViewAdapter(getApplicationContext(), pedidos, false);
         recyclerView.setAdapter(adapter);
@@ -57,7 +57,7 @@ public class ComprasRealizadasActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        Intent intent = new Intent(this, MainActivityCliente.class);
+        Intent intent = new Intent(this, MainActivityAdmin.class);
         intent.putExtra(LoginActivity.USUARIO, usuario);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

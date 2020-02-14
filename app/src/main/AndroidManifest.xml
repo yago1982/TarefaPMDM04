@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ymourino.pmdm03">
+    package="com.ymourino.pmdm04">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".ModificarDatosActivity"
+            android:label="Modificar datos" />
         <activity
             android:name=".PedidosRechazadosActivity"
             android:label="Pedidos rechazados" />
@@ -36,10 +47,8 @@
         <activity
             android:name=".ComprasRealizadasActivity"
             android:label="Compras realizadas" />
-        <activity
-            android:name=".MainActivityCliente" />
-        <activity
-            android:name=".MainActivityAdmin" />
+        <activity android:name=".MainActivityCliente" />
+        <activity android:name=".MainActivityAdmin" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

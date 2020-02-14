@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 /**
  * La clase implementa la interfaz AdapterView.OnItemSelectedListener para poder reaccionar correctamente
@@ -19,9 +19,9 @@ import com.ymourino.pmdm03.modelos.Usuario;
  */
 public class HacerPedidoActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    public static final String CATEGORIA = "com.ymourino.pmdm03.CATEGORIA";
-    public static final String PRODUCTO = "com.ymourino.pmdm03.PRODUCTO";
-    public static final String CANTIDAD = "com.ymourino.pmdm03.CANTIDAD";
+    public static final String CATEGORIA = "com.ymourino.pmdm04.CATEGORIA";
+    public static final String PRODUCTO = "com.ymourino.pmdm04.PRODUCTO";
+    public static final String CANTIDAD = "com.ymourino.pmdm04.CANTIDAD";
 
     private Usuario usuario;
 

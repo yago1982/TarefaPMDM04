@@ -1,4 +1,4 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,13 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 public class EnviarPedidoActivity extends AppCompatActivity {
 
-    public static final String DIRECCION = "com.ymourino.pmdm03.DIRECCION";
-    public static final String CIUDAD = "com.ymourino.pmdm03.CIUDAD";
-    public static final String CP = "com.ymourino.pmdm03.CP";
+    public static final String DIRECCION = "com.ymourino.pmdm04.DIRECCION";
+    public static final String CIUDAD = "com.ymourino.pmdm04.CIUDAD";
+    public static final String CP = "com.ymourino.pmdm04.CP";
 
     private Usuario usuario;
     private String categoria;

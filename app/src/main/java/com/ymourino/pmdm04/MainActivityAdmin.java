@@ -1,9 +1,12 @@
-package com.ymourino.pmdm03;
+package com.ymourino.pmdm04;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,11 +15,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ymourino.pmdm03.modelos.Usuario;
+import com.ymourino.pmdm04.modelos.Usuario;
 
 public class MainActivityAdmin extends AppCompatActivity {
 
     private Usuario usuario;
+    public static final String ACTIVIDAD_ADMIN = "com.ymourino.pmdm04.ACTIVIDAD_ADMIN";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +35,10 @@ public class MainActivityAdmin extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.label_usuario)).setText(usuario.getNombre() + " " + usuario.getApellidos());
 
-        ((ImageView) findViewById(R.id.image_avatarUsuario))
-                .setImageDrawable(getResources()
-                        .getDrawableForDensity(R.drawable.admin, getResources().getDisplayMetrics().densityDpi));
+        ImageView avatarUsuario = (ImageView) findViewById(R.id.image_avatarUsuario);
+        Context context = getApplicationContext();
+        Bitmap avatar = BitmapFactory.decodeFile(context.getFileStreamPath(usuario.getUsername() + ".jpg").getAbsolutePath());
+        avatarUsuario.setImageBitmap(avatar);
     }
 
 
@@ -72,6 +77,14 @@ public class MainActivityAdmin extends AppCompatActivity {
                 intent_pedidosRechazados.putExtra(LoginActivity.USUARIO, usuario);
                 startActivity(intent_pedidosRechazados);
                 return true;
+
+            case R.id.item_modificarDatos:
+                Intent intent_modificarDatos = new Intent(this, ModificarDatosActivity.class);
+                intent_modificarDatos.putExtra(LoginActivity.USUARIO, usuario);
+                intent_modificarDatos.putExtra(MainActivityCliente.TIPO_ACTIVIDAD, ACTIVIDAD_ADMIN);
+                startActivity(intent_modificarDatos);
+                return true;
+
             case R.id.item_salir:
                 finish();
                 return true;
